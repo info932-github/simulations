@@ -1,0 +1,44 @@
+What does a VM do?
+Accepts money from a customer and dispenses selected food/drink to the customer.  Then dispenses change, if any.
+
+What is the sequence or workflow of a vending machine?
+
+
+  1. user walks up to the vm to look at the available items.
+  2. the available items are displayed to the user with an id and a price
+  3. the user inserts money into the machine and enters the id to purchase
+  4. if the amount entered is greater than or equal to the price of the entered item, the machine dispenses the item to the user.
+  5. if there is any change left, the machine calculates the fewest amount of coins to return and dispenses the change.
+  6. if the amount entered is less than the price of the selected item, display message that the price is x, y was entered and z remains.
+
+What objects may be derived from this information?
+
+VM
+which contains items and accepts money
+
+Item
+which has an id, description and price.  It may also have a quantity.
+
+CandyBar is an Item
+Soda is an Item
+
+Steps:
+
+
+  1. create classes
+  2. create boot strap
+  3. create tests for methods as we go
+  4. create methods for displaying available items
+  5. create methods for accepting money
+  6. create method for selecting the item
+  7. create method for dispensing the selected item
+  8. create method for calculating the change 
+  9. create a method for dispensing the change.
+  10. test
+  11. create a data access layer
+  12. create a getItems method
+  13. create a getItem method that takes an ID.  leave off the where clause so that the addItem unit test will show the error
+  14. create an addItem that takes an Item object and adds a record to the Items table.
+  15. create an updateItem method that takes an Item object and updates the record in the items table
+  16. create a deleteItem method that deletes the record in the database for a given id
+  17. modify the VM app to use the new DAL getting items from the DAL and updating to the DAL.
